@@ -1,0 +1,275 @@
+body {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #777777;
+  background-image: url("../Images/ticks.png");
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  clear: both;
+}
+
+#head {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  margin: 0 0 30px;
+  overflow: auto;
+  color: #ffffff;
+  background: #ffffff;
+  border-bottom: 2px solid #cccccc;
+}
+
+/* Name block character formatting */
+#logo {
+  float: left;
+  width: 300px;
+  height: 80px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 80px;
+  font-weight: bold;
+  text-align: center;
+  background: #4aaaa5;
+  margin: 0;
+}
+
+nav {
+  float:right;
+  line-height: 80px;
+}
+
+nav a {
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 18px;
+  color: #999;
+  text-decoration: none;
+  border-left: 1px solid #efefef;
+}
+
+nav a:first-child {
+  border-left: 0 none;
+}
+
+/* Formats content box with secondary header within each page */
+#main-container {
+  padding-top: 120px;
+  min-height: calc(100vh - 70px);
+}
+
+.main-section {
+  float: left;
+  width: 100%;
+  max-width: 960px;
+  padding: 0 30px 30px 30px;
+  margin: 0 0 40px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+#profile {
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+  margin-right: 25px;
+}
+
+/* Formats the secondary header only */
+h2 {
+  color: #4aaaa5;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #cccccc;
+}
+
+/* Formats paragraph text and spacing */
+p {
+  font-size: 16px;
+  line-height: 2em;
+}
+
+.projects {
+  position: relative;
+  float: left;
+  width: 275px;
+  margin: 20px 0 25px;
+  overflow: auto;
+}
+
+.projects:nth-child(even) {
+  margin-right: 40px;
+}
+
+.projects img {
+  width: 100%;
+  border: 0 none;
+}
+
+.projects h3 {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 0;
+  font-weight: bold;
+  line-height: 30px;
+  color: #ffffff;
+  text-align: center;
+  background: #4aaaa5;
+  border-bottom: 0;
+}
+
+/* Spacing for submission form */
+form {
+  line-height: 2em;
+}
+
+/* Modifies input boxes */
+input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+/* Modifies message text box */
+#message {
+  width: 100%;
+  height: 150px;
+  line-height: 1.5em;
+}
+
+/* Modifies submit button */
+#submit {
+  height: 40px;
+  width: 120px;
+  background-color: #4aaaa5;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.5em;
+  border: 1px solid #4aaaa5;
+}
+
+/* Formats footer */
+/* Flex-shrink used for sticky footer */
+footer {
+  background-color: #666666;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  clear: both;
+  color: #cccccc;
+  font-size: 14px;
+  text-align: center;
+  border-top: 8px solid #4aaaa5;
+}
+
+@media screen and (max-width: 980px) {
+
+  .main-section {
+    float: none;
+    width: 60%;
+    margin-left: 50px;
+    margin-bottom: 100px;
+  }
+
+  .projects {
+    float: none;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;    
+  }
+  
+  .projects:nth-child(even) {
+    float: none;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .main-section {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+
+  .projects {
+    float: none;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;    
+  }
+  
+  .projects:nth-child(even) {
+    float: none;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+
+  #head {
+    position: static;
+    margin: 0;
+  }
+  
+  #logo {
+    width: 100%;
+  }
+
+  nav {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  #main-container {
+    padding-top: 40px;
+  }
+
+  .main-section {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+
+  .projects {
+    float: none;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+  }
+
+  .projects:nth-child(even) {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
