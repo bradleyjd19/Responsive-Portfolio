@@ -166,7 +166,6 @@ input {
 }
 
 /* Formats footer */
-/* Flex-shrink used for sticky footer */
 footer {
   background-color: #666666;
   padding-top: 30px;
@@ -178,51 +177,38 @@ footer {
   border-top: 8px solid #4aaaa5;
 }
 
-@media screen and (max-width: 980px) {
+@media only screen and (max-width: 980px) {
 
-  .main-section {
-    float: none;
-    width: 60%;
-    margin-left: 50px;
-    margin-bottom: 100px;
-  }
-
-  .projects {
-    float: none;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;    
-  }
-  
-  .projects:nth-child(even) {
-    float: none;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  nav {
+    margin-right: 5px;
   }
 }
 
 @media screen and (max-width: 768px) {
 
   .main-section {
-    float: none;
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 100px;
+    width: 100%;
+  }
+
+  main {
+    overflow: auto;
   }
 
   .projects {
-    float: none;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;    
+    width: 47%;
+    margin-bottom: 10px;    
   }
   
   .projects:nth-child(even) {
-    float: none;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  .projects:nth-child(odd) {
+    float: right;
+  }
+
+  #profile {
+    width: 50%;
   }
 }
 
@@ -233,7 +219,9 @@ footer {
     margin: 0;
   }
   
-  #logo {
+  #logo,
+  .projects,
+  #profile {
     width: 100%;
   }
 
@@ -250,26 +238,5 @@ footer {
 
   #main-container {
     padding-top: 40px;
-  }
-
-  .main-section {
-    float: none;
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 100px;
-  }
-
-  .projects {
-    float: none;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    
-  }
-
-  .projects:nth-child(even) {
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
   }
 }
